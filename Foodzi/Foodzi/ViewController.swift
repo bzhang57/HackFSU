@@ -72,6 +72,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
         }
     }
+    
+     @IBAction func myUnwindActionNewRecipeToMain(unwindSegue: UIStoryboardSegue) {}
+    
+     @IBAction func myUnwindActionDetailViewToMain(unwindSegue: UIStoryboardSegue) {}
+    
+     @IBAction func myUnwindActionInstructionViewToMain(unwindSegue: UIStoryboardSegue) {}
 
 }
 
