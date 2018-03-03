@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request
 
 from flaskapp import app, db
+from Model.Recipe import Recipe
 
 db.create_all()
 
