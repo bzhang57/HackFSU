@@ -24,10 +24,19 @@ class UploadLinkViewController: UIViewController {
     @IBOutlet weak var uploadLinkTextField: UITextField!
     
     @IBAction func UploadLinkAction(_ sender: UIButton) {
-        var url = NSURL(string: "https://www.allrecipes.com/recipe/240208/simple-baked-chicken-breasts/")
+        let myURLString = "https://www.yellowblissroad.com/baked-chicken-breasts/"
+        guard let myURL = NSURL(string: myURLString) else {
+            print("Error: \(myURLString) doesn't seem to be a valid URL")
+            return
+        }
         
-//        print("HTML : \(myHTMLString)")
-       
+        }
+            print("Error: \(error)")
+        } catch let error as NSError {
+            print("HTML : \(myHTMLString)")
+            let myHTMLString = try String(contentsOf: myURL as URL)
+         
+        do {
     }
     
     /*

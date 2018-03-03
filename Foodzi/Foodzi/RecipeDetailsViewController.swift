@@ -55,7 +55,7 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var edit: UIButton!
     
-    
+    var recipeStepsArray = [["Preheat Oven to 400 F", "Beke for 20 minutes", "Let it sit for 10 min"], ["Preheat Oven to 400 F", "Beke for 20 minutes", "Let it sit for 10 min"]]
     
     
     override func viewDidLoad() {
