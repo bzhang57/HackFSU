@@ -3,6 +3,7 @@ from flask import request
 
 from flaskapp import app, db
 from Model.Recipe import Recipe
+#from Model.User import User
 
 db.create_all()
 
