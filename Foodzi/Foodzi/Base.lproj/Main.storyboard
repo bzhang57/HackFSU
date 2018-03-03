@@ -326,6 +326,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addIngredient:" destination="QeF-jS-6xV" eventType="touchUpInside" id="dP5-LV-UHL"/>
+                                    <segue destination="ubw-DC-vaC" kind="show" identifier="addIngredientToDetails" id="0ax-G0-SvL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3h-us-JyU">
                                 <rect key="frame" x="16" y="20" width="48" height="30"/>
@@ -339,6 +343,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ygE-RA-Id7"/>
                     </view>
+                    <connections>
+                        <outlet property="add" destination="7bM-x5-Evl" id="TWt-85-j8H"/>
+                        <outlet property="amount" destination="dTr-FG-zPX" id="tWO-sV-Apj"/>
+                        <outlet property="ingredient" destination="CG9-Lz-8ZG" id="c97-UH-EY0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnz-6n-O4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="xAm-FV-xRg" userLabel="Exit" sceneMemberID="exit"/>
@@ -476,4 +485,7 @@
     <resources>
         <image name="Logo" width="740" height="324"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0ax-G0-SvL"/>
+    </inferredMetricsTieBreakers>
 </document>
