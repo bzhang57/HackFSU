@@ -13,6 +13,9 @@ class RecipeTableViewCell: UITableViewCell {
     @IBOutlet weak var recipeName: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var recipeRating: UILabel!
+    @IBOutlet weak var cookName: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
