@@ -128,8 +128,6 @@
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="2" maxX="0.0" maxY="2"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bigz" rowHeight="70" id="7qB-7s-GVM" customClass="RecipeTableViewCell" customModule="Foodzi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="70"/>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bigz" rowHeight="100" id="7qB-7s-GVM" customClass="RecipeTableViewCell" customModule="Foodzi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
