@@ -20,6 +20,8 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         return count!
     }
     
+    @IBAction func myUnwindActionAddIngredientsToReviewReceipe(unwindSegue: UIStoryboardSegue) {}
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell?

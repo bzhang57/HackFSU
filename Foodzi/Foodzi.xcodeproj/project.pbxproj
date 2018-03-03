@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D21611D204AE666007CA9BD /* AddIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D21611C204AE666007CA9BD /* AddIngredientsViewController.swift */; };
 		4DAD89DE204A60B000E51314 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD89DD204A60B000E51314 /* IngredientTableViewCell.swift */; };
 		4DAD89E0204A60C300E51314 /* DirectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD89DF204A60C300E51314 /* DirectionTableViewCell.swift */; };
 		4DAD89E2204A618B00E51314 /* IngredientTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD89E1204A618B00E51314 /* IngredientTableView.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D21611C204AE666007CA9BD /* AddIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsViewController.swift; sourceTree = "<group>"; };
 		4DAD89DD204A60B000E51314 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		4DAD89DF204A60C300E51314 /* DirectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionTableViewCell.swift; sourceTree = "<group>"; };
 		4DAD89E1204A618B00E51314 /* IngredientTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				4DAD89DF204A60C300E51314 /* DirectionTableViewCell.swift */,
 				4F0AFBFD204A3789008D4FD9 /* AppDelegate.swift */,
 				4F0AFBFF204A3789008D4FD9 /* ViewController.swift */,
+				4D21611C204AE666007CA9BD /* AddIngredientsViewController.swift */,
 				4F0AFC1D204A4205008D4FD9 /* NewRecipeViewController.swift */,
 				4F0AFC01204A3789008D4FD9 /* Main.storyboard */,
 				4F0AFC1F204A4284008D4FD9 /* UploadLinkViewController.swift */,
@@ -235,6 +238,7 @@
 				4F0AFBFE204A3789008D4FD9 /* AppDelegate.swift in Sources */,
 				4F0AFC26204A4B40008D4FD9 /* RecipeTableViewCell.swift in Sources */,
 				4F0AFC1E204A4205008D4FD9 /* NewRecipeViewController.swift in Sources */,
+				4D21611D204AE666007CA9BD /* AddIngredientsViewController.swift in Sources */,
 				4F0AFC22204A42AB008D4FD9 /* RecipeDetailsViewController.swift in Sources */,
 				4F0AFC20204A4284008D4FD9 /* UploadLinkViewController.swift in Sources */,
 			);
