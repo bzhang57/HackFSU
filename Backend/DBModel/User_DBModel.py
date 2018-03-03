@@ -1,18 +1,15 @@
 import json
 import uuid
-from Utility.Encryptor import Encryptor
-from Utility.color_print import ColorPrint
 from flaskapp import db, app
 from flask import request, Response, send_file, send_from_directory, make_response, session
 from sqlalchemy.dialects.postgresql import JSON
-from DBModel.User_DBModel import User_DBModel
 import datetime
 
 class User_DBModel(db.Model):
-	__tablename__ = 'users'
-	id = db.Column(db.Text, primary_key = True)
-	password = db.Column(db.Text, primary_key = False)
-	email = db.Column(db.Text)
+    __tablename__ = 'users'
+    id = db.Column(db.Text, primary_key = True)
+    password = db.Column(db.Text, primary_key = False)
+    email = db.Column(db.Text)
     name = db.Column(db.Text)
     password = db.Column(db.Text)
     tags = db.Column(db.Text)
@@ -20,7 +17,7 @@ class User_DBModel(db.Model):
     followers = db.Column(db.Text)
     saved_recipes = db.Column(db.Text)
 
-	def __init__(self, id, name, password, email, tags, following, followers, saved_recipes):
+    def __init__(self, id, name, password, email, tags, following, followers, saved_recipes):
         self.id = id
         self.name = name
         self.password = password
