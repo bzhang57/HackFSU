@@ -10,6 +10,10 @@ import UIKit
 
 class AddIngredientsViewController: UIViewController {
 
+    @IBOutlet weak var ingredient: UITextField!
+    @IBOutlet weak var amount: UITextField!
+    @IBOutlet weak var add: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +26,19 @@ class AddIngredientsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func addIngredient(_ sender: Any) {
+        performSegue(withIdentifier: "addIngredientToDetails", sender: Any?.self)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "addIngredientToDetails"),
+            
+            let destination = segue.destination as? RecipeDetailsViewController
+        {
+            
+            
+            destination.ingredients.append(amount.text! + " " + ingredient.text!)
+        }
+    }
 
 }
