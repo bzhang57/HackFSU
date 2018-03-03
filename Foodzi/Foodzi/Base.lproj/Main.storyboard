@@ -60,7 +60,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECI-Us-gIs">
-                                                    <rect key="frame" x="252" y="11" width="38" height="48"/>
+                                                    <rect key="frame" x="307" y="11" width="38" height="48"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -108,6 +108,7 @@
                     <connections>
                         <outlet property="mealHistoryTableView" destination="J58-fw-LNU" id="F4n-Jd-cfK"/>
                         <segue destination="ubw-DC-vaC" kind="show" identifier="startToRecipeSegue" id="OZa-pQ-o81"/>
+                        <segue destination="r2g-Sh-RCf" kind="show" identifier="startToUploadSegue" id="Y3J-qs-DSr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -293,10 +294,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="i6P-pV-k7U">
-                                <rect key="frame" x="103" y="280" width="460" height="107"/>
+                                <rect key="frame" x="103" y="280" width="168" height="107"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tt-Nb-Sys">
-                                        <rect key="frame" x="178" y="0.0" width="104" height="36"/>
+                                        <rect key="frame" x="32" y="0.0" width="104" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Upload Link"/>
                                         <connections>
@@ -304,7 +305,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyN-on-EzO">
-                                        <rect key="frame" x="146" y="71" width="168" height="36"/>
+                                        <rect key="frame" x="0.0" y="71" width="168" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Create Own Recipe"/>
                                     </button>
