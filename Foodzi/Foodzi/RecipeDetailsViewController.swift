@@ -8,12 +8,44 @@
 
 import UIKit
 
-class RecipeDetailsViewController: UIViewController {
-
+class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ingredients.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell: IngredientTableViewCell = IngredientTableViewCell(style: .subtitle, reuseIdentifier: "tableCell")
+        
+        cell.textLabel?.text = "hello"
+        
+        return cell
+    }
+    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 2
+//    }
+    
+    var edit_hidden = true
+    var ingredients = [] as Array
+    var directions = [] as Array
+    
+    @IBOutlet weak var recipeName: UILabel!
+    @IBOutlet weak var ingredientTable: IngredientTableView!
+    @IBOutlet weak var directionTable: DirectionTableView!
+    @IBOutlet weak var start: UIButton!
+    @IBOutlet weak var addIngredients: UIButton!
+    @IBOutlet weak var addDirections: UIButton!
+    @IBOutlet weak var back: UIButton!
+    @IBOutlet weak var edit: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        addIngredients.isHidden = true
+        addDirections.isHidden = true
+        directionTable.dataSource = self
+        directionTable.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +53,31 @@ class RecipeDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    @IBAction func edit(_ sender: Any) {
+        if (edit_hidden) {
+            addIngredients.isHidden = false
+            addDirections.isHidden = false
+            edit.setTitle("Done", for: .normal)
+            edit_hidden = false
+        } else {
+            addIngredients.isHidden = true
+            addDirections.isHidden = true
+            edit.setTitle("Edit", for: .normal)
+            edit_hidden = true
+        }
+    }
+    
+    @IBAction func addIngredient(_ sender: Any) {
+        ingredients.append(("1/2 cup", "salt"))
+        print(ingredients)
+    }
+    
+    @IBAction func addDirection(_ sender: Any) {
+        directions.append(("1.", "Preheat"))
+        print(directions)
+    }
+    
     /*
     // MARK: - Navigation
 
