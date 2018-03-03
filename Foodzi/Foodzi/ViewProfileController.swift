@@ -1,14 +1,14 @@
-
-//  ViewController.swift
+//
+//  ViewProfileController.swift
 //  Foodzi
 //
-//  Created by Bryan Zhang on 3/2/18.
+//  Created by Jonathan He on 3/3/18.
 //  Copyright © 2018 Bryan Zhang. All rights reserved.
-
+//
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewProfileController: UIViewController {
 
     var count = 0
     let recipeNames = ["Chicken", "Steak", "Pork", "Ramen", "Sushi"]
@@ -19,70 +19,69 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var selectedRow = 0
     var name = ""
     @IBOutlet weak var mealHistoryTableView: UITableView!
-
+    
     @IBAction func addNewRecipe(_ sender: Any) {
         performSegue(withIdentifier: "startToUploadSegue", sender: Any?.self)
-
+        
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mealHistoryTableView.delegate = self
         mealHistoryTableView.dataSource = self
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipeNames.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bigz") as! RecipeTableViewCell
         cell.recipeName.text = recipeNames[count]
         cell.timeLabel.text = cookingTimes[count] + "\n mins"
         cell.recipeImage.image = recipeImages[count]
         cell.recipeRating.text = recipeRatings[count]
-        cell.cookName.text = "Recipe submitted by \n" + cookNames[count] 
+        cell.cookName.text = "Recipe submitted by \n" + cookNames[count]
         count = count + 1
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         selectedRow = indexPath.row
         performSegue(withIdentifier: "startToRecipeSegue", sender: Any?.self)
     }
+    
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        if (segue.identifier == "startToRecipeSegue"),
+    //
+    //            let destination = segue.destination as? RecipeDetailsViewController
+    //        {
+    //
+    //
+    //            destination.name = recipeNames[selectedRow]
+    //        }
+    //        if (segue.identifier == "startToUploadSegue"),
+    //            let destination = segue.destination as? NewRecipeViewController
+    //        {
+    //        }
+    //    }
+    //
+    //     @IBAction func myUnwindActionNewRecipeToMain(unwindSegue: UIStoryboardSegue) {}
+    //
+    //     @IBAction func myUnwindActionDetailViewToMain(unwindSegue: UIStoryboardSegue) {}
+    //
+    //     @IBAction func myUnwindActionInstructionViewToMain(unwindSegue: UIStoryboardSegue) {}
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.identifier == "startToRecipeSegue"),
-//
-//            let destination = segue.destination as? RecipeDetailsViewController
-//        {
-//
-//
-//            destination.name = recipeNames[selectedRow]
-//        }
-//        if (segue.identifier == "startToUploadSegue"),
-//            let destination = segue.destination as? NewRecipeViewController
-//        {
-//        }
-//    }
-//
-//     @IBAction func myUnwindActionNewRecipeToMain(unwindSegue: UIStoryboardSegue) {}
-//
-//     @IBAction func myUnwindActionDetailViewToMain(unwindSegue: UIStoryboardSegue) {}
-//
-//     @IBAction func myUnwindActionInstructionViewToMain(unwindSegue: UIStoryboardSegue) {}
 
 }
-
-
