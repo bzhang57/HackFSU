@@ -11,6 +11,10 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var count = 0
+    let recipeNames = ["Chicken", "Steak", "Pork", "Ramen", "Sushi"]
+    let cookingTimes = ["45", "45", "35", "30", "25"]
+    let recipeImages = [#imageLiteral(resourceName: "chicken.jpg"), #imageLiteral(resourceName: "steak.jpg"), #imageLiteral(resourceName: "pork.jpg"), #imageLiteral(resourceName: "ramen.jpg"), #imageLiteral(resourceName: "sushi.jpg")]
+    var selectedRow = 0
     @IBOutlet weak var mealHistoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +37,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bigz") as! RecipeTableViewCell
-        cell.recipeName.text = "Chicken"
-        cell.timeLabel.text = "45 Min"
-        cell.recipeImage.image = #imageLiteral(resourceName: "chicken.jpg")
-        
+        cell.recipeName.text = recipeNames[count]
+        cell.timeLabel.text = cookingTimes[count]
+        cell.recipeImage.image = recipeImages[count]
+        count = count + 1
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        selectedRow = indexPath.row
+        performSegue(withIdentifier: "startToRecipeSegue", sender: Any?.self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "startToRecipeSegue"),
+        
+            let destination = segue.destination as? RecipeDetailsViewController
+        {
+          
+            
+            destination.name = recipeNames[selectedRow]
+        }
     }
 
 }

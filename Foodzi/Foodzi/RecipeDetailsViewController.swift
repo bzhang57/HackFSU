@@ -30,7 +30,7 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     var edit_hidden = true
     var ingredients = [] as Array
     var directions = [] as Array
-    
+    var name = ""
     @IBOutlet weak var recipeName: UILabel!
     @IBOutlet weak var ingredientTable: IngredientTableView!
     @IBOutlet weak var directionTable: DirectionTableView!
@@ -46,6 +46,7 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         addDirections.isHidden = true
         directionTable.dataSource = self
         directionTable.delegate = self
+        recipeName.text = name
     }
 
     override func didReceiveMemoryWarning() {

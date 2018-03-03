@@ -23,6 +23,10 @@
 		4F0AFC24204A42DC008D4FD9 /* RecipeStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */; };
 		4F0AFC26204A4B40008D4FD9 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC25204A4B40008D4FD9 /* RecipeTableViewCell.swift */; };
 		4F0AFC28204A615A008D4FD9 /* chicken.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F0AFC27204A6159008D4FD9 /* chicken.jpg */; };
+		4F0AFC2A204A6FE1008D4FD9 /* steak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F0AFC29204A6FE1008D4FD9 /* steak.jpg */; };
+		4F0AFC2C204A7027008D4FD9 /* pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F0AFC2B204A7027008D4FD9 /* pork.jpg */; };
+		4F0AFC2E204A7058008D4FD9 /* ramen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F0AFC2D204A7057008D4FD9 /* ramen.jpg */; };
+		4F0AFC30204A7071008D4FD9 /* sushi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F0AFC2F204A7070008D4FD9 /* sushi.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStepsViewController.swift; sourceTree = "<group>"; };
 		4F0AFC25204A4B40008D4FD9 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		4F0AFC27204A6159008D4FD9 /* chicken.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicken.jpg; sourceTree = "<group>"; };
+		4F0AFC29204A6FE1008D4FD9 /* steak.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = steak.jpg; sourceTree = "<group>"; };
+		4F0AFC2B204A7027008D4FD9 /* pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pork.jpg; sourceTree = "<group>"; };
+		4F0AFC2D204A7057008D4FD9 /* ramen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ramen.jpg; sourceTree = "<group>"; };
+		4F0AFC2F204A7070008D4FD9 /* sushi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sushi.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				4F0AFC27204A6159008D4FD9 /* chicken.jpg */,
+				4F0AFC29204A6FE1008D4FD9 /* steak.jpg */,
+				4F0AFC2B204A7027008D4FD9 /* pork.jpg */,
+				4F0AFC2D204A7057008D4FD9 /* ramen.jpg */,
+				4F0AFC2F204A7070008D4FD9 /* sushi.jpg */,
 				4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */,
 				4F0AFC21204A42AB008D4FD9 /* RecipeDetailsViewController.swift */,
 				4DAD89E1204A618B00E51314 /* IngredientTableView.swift */,
@@ -209,7 +221,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0AFC2E204A7058008D4FD9 /* ramen.jpg in Resources */,
+				4F0AFC2A204A6FE1008D4FD9 /* steak.jpg in Resources */,
+				4F0AFC2C204A7027008D4FD9 /* pork.jpg in Resources */,
 				4F0AFC08204A3789008D4FD9 /* LaunchScreen.storyboard in Resources */,
+				4F0AFC30204A7071008D4FD9 /* sushi.jpg in Resources */,
 				4F0AFC05204A3789008D4FD9 /* Assets.xcassets in Resources */,
 				4F0AFC03204A3789008D4FD9 /* Main.storyboard in Resources */,
 				4F0AFC28204A615A008D4FD9 /* chicken.jpg in Resources */,
