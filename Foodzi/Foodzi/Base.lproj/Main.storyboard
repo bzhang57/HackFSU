@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="112.89355322338831"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Details View Controller-->
         <scene sceneID="gMB-pW-30L">
             <objects>
-                <viewController id="ubw-DC-vaC" sceneMemberID="viewController">
+                <viewController id="ubw-DC-vaC" customClass="RecipeDetailsViewController" customModule="Foodzi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Euz-xp-mEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="809.14542728635683"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Steps View Controller-->
         <scene sceneID="fOb-ad-LVm">
             <objects>
-                <viewController id="mdD-J8-sNZ" sceneMemberID="viewController">
+                <viewController id="mdD-J8-sNZ" customClass="RecipeStepsViewController" customModule="Foodzi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mgk-dF-vSB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="128.80000000000001" y="1503.5982008995504"/>
         </scene>
-        <!--View Controller-->
+        <!--New Recipe View Controller-->
         <scene sceneID="aNb-8C-YCy">
             <objects>
-                <viewController id="r2g-Sh-RCf" sceneMemberID="viewController">
+                <viewController id="r2g-Sh-RCf" customClass="NewRecipeViewController" customModule="Foodzi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ux4-kT-mR7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="884" y="112.89355322338831"/>
         </scene>
-        <!--View Controller-->
+        <!--Upload Link View Controller-->
         <scene sceneID="pjl-Qx-PSI">
             <objects>
-                <viewController id="JCz-E3-9ko" sceneMemberID="viewController">
+                <viewController id="JCz-E3-9ko" customClass="UploadLinkViewController" customModule="Foodzi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d93-Vh-kPu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
