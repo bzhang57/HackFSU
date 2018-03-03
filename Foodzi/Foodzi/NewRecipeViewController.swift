@@ -9,7 +9,12 @@
 import UIKit
 
 class NewRecipeViewController: UIViewController {
-
+    
+    // MARK: Properties
+    @IBOutlet weak var BackButton: UIButton!
+    @IBOutlet weak var UploadLinkButton: UIButton!
+    @IBOutlet weak var CreateNewRecipeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

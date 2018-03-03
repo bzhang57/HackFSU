@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r2g-Sh-RCf">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,21 +15,21 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Foodzi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foodzi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM7-dH-hVT">
-                                <rect key="frame" x="0.0" y="25" width="375" height="51.5"/>
+                                <rect key="frame" x="0.0" y="5" width="667" height="51.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ai-Vj-Qem">
-                                <rect key="frame" x="0.0" y="632" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="340" width="667" height="30"/>
                                 <state key="normal" title="Add New Recipe"/>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQV-6w-Uve">
-                                <rect key="frame" x="10" y="91.5" width="355" height="535.5"/>
+                                <rect key="frame" x="10" y="71.5" width="647" height="263.5"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,7 +57,7 @@
             <objects>
                 <viewController id="ubw-DC-vaC" customClass="RecipeDetailsViewController" customModule="Foodzi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Euz-xp-mEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOb-IK-gsO">
@@ -81,7 +81,7 @@
             <objects>
                 <viewController id="mdD-J8-sNZ" customClass="RecipeStepsViewController" customModule="Foodzi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mgk-dF-vSB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jF-yk-AHd">
@@ -105,20 +105,44 @@
             <objects>
                 <viewController id="r2g-Sh-RCf" customClass="NewRecipeViewController" customModule="Foodzi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ux4-kT-mR7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload Link/create recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLr-cm-JlC">
-                                <rect key="frame" x="166" y="323" width="209" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="i6P-pV-k7U">
+                                <rect key="frame" x="103" y="280" width="460" height="107"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tt-Nb-Sys">
+                                        <rect key="frame" x="178" y="0.0" width="104" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Upload Link"/>
+                                        <connections>
+                                            <segue destination="JCz-E3-9ko" kind="show" id="1Dx-M6-4q6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyN-on-EzO">
+                                        <rect key="frame" x="146" y="71" width="168" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Create Own Recipe"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i6P-pV-k7U" firstAttribute="top" secondItem="556-fa-RIA" secondAttribute="top" constant="257" id="BQj-eZ-c27"/>
+                            <constraint firstItem="i6P-pV-k7U" firstAttribute="leading" secondItem="556-fa-RIA" secondAttribute="leading" constant="104" id="Jyr-11-Aqh"/>
+                            <constraint firstItem="556-fa-RIA" firstAttribute="trailing" secondItem="i6P-pV-k7U" secondAttribute="trailing" constant="103" id="L8I-i9-cwB"/>
+                            <constraint firstItem="i6P-pV-k7U" firstAttribute="leading" secondItem="556-fa-RIA" secondAttribute="leading" constant="104" id="NYJ-wV-NuJ"/>
+                            <constraint firstItem="i6P-pV-k7U" firstAttribute="leading" secondItem="556-fa-RIA" secondAttribute="leading" constant="104" id="S7N-mp-pf4"/>
+                            <constraint firstItem="556-fa-RIA" firstAttribute="trailing" secondItem="i6P-pV-k7U" secondAttribute="trailing" constant="103" id="Vcm-hI-Pqy"/>
+                            <constraint firstItem="i6P-pV-k7U" firstAttribute="top" secondItem="556-fa-RIA" secondAttribute="top" constant="257" id="pl8-o5-Gdy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="556-fa-RIA"/>
                     </view>
+                    <connections>
+                        <outlet property="CreateNewRecipeButton" destination="AyN-on-EzO" id="c51-vh-2mO"/>
+                        <outlet property="UploadLinkButton" destination="2Tt-Nb-Sys" id="eiE-7C-Oqu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0BP-Mc-2tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,7 +153,7 @@
             <objects>
                 <viewController id="JCz-E3-9ko" customClass="UploadLinkViewController" customModule="Foodzi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d93-Vh-kPu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="er0-zD-Pve">
