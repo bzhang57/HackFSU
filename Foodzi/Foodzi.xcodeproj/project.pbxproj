@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DAD89DE204A60B000E51314 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD89DD204A60B000E51314 /* IngredientTableViewCell.swift */; };
+		4DAD89E0204A60C300E51314 /* DirectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD89DF204A60C300E51314 /* DirectionTableViewCell.swift */; };
+		4DAD89E2204A618B00E51314 /* IngredientTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD89E1204A618B00E51314 /* IngredientTableView.swift */; };
+		4DAD89E4204A619E00E51314 /* DirectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD89E3204A619E00E51314 /* DirectionTableView.swift */; };
 		4F0AFBFE204A3789008D4FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFBFD204A3789008D4FD9 /* AppDelegate.swift */; };
 		4F0AFC00204A3789008D4FD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFBFF204A3789008D4FD9 /* ViewController.swift */; };
 		4F0AFC03204A3789008D4FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0AFC01204A3789008D4FD9 /* Main.storyboard */; };
@@ -32,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DAD89DD204A60B000E51314 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
+		4DAD89DF204A60C300E51314 /* DirectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionTableViewCell.swift; sourceTree = "<group>"; };
+		4DAD89E1204A618B00E51314 /* IngredientTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableView.swift; sourceTree = "<group>"; };
+		4DAD89E3204A619E00E51314 /* DirectionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionTableView.swift; sourceTree = "<group>"; };
 		4F0AFBFA204A3789008D4FD9 /* Foodzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0AFBFD204A3789008D4FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F0AFBFF204A3789008D4FD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +100,10 @@
 				4F0AFC27204A6159008D4FD9 /* chicken.jpg */,
 				4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */,
 				4F0AFC21204A42AB008D4FD9 /* RecipeDetailsViewController.swift */,
+				4DAD89E1204A618B00E51314 /* IngredientTableView.swift */,
+				4DAD89E3204A619E00E51314 /* DirectionTableView.swift */,
+				4DAD89DD204A60B000E51314 /* IngredientTableViewCell.swift */,
+				4DAD89DF204A60C300E51314 /* DirectionTableViewCell.swift */,
 				4F0AFBFD204A3789008D4FD9 /* AppDelegate.swift */,
 				4F0AFBFF204A3789008D4FD9 /* ViewController.swift */,
 				4F0AFC1D204A4205008D4FD9 /* NewRecipeViewController.swift */,
@@ -219,7 +231,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F0AFC24204A42DC008D4FD9 /* RecipeStepsViewController.swift in Sources */,
+				4DAD89E2204A618B00E51314 /* IngredientTableView.swift in Sources */,
 				4F0AFC00204A3789008D4FD9 /* ViewController.swift in Sources */,
+				4DAD89E4204A619E00E51314 /* DirectionTableView.swift in Sources */,
+				4DAD89DE204A60B000E51314 /* IngredientTableViewCell.swift in Sources */,
+				4DAD89E0204A60C300E51314 /* DirectionTableViewCell.swift in Sources */,
 				4F0AFBFE204A3789008D4FD9 /* AppDelegate.swift in Sources */,
 				4F0AFC26204A4B40008D4FD9 /* RecipeTableViewCell.swift in Sources */,
 				4F0AFC1E204A4205008D4FD9 /* NewRecipeViewController.swift in Sources */,
