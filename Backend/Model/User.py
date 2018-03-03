@@ -1,16 +1,11 @@
 import json
 import uuid
-from Utility.Encryptor import Encryptor
-from Utility.color_print import ColorPrint
 from flaskapp import db, app
 from flask import request, Response, send_file, send_from_directory, make_response, session
 from sqlalchemy.dialects.postgresql import JSON
 from DBModel.User_DBModel import User_DBModel
 import datetime
 
-encryptor = Encryptor()
-seconds_in_hour = 60*60
-session_inactivity_timeout = datetime.timedelta(0, seconds_in_hour * 2)
 
 class User():
 
@@ -71,8 +66,9 @@ class User():
 				dict_local = {'id': report.id,
 												'name': report.name,
 												'email': report.email,
-												'password' : report.password
+												'password' : report.password,
 												'tags': report.tags
+												}
 
 				return_json_list.append(dict_local)
 			return_string = json.dumps(return_json_list, sort_keys=True, indent=4, separators=(',', ': '))
@@ -89,11 +85,11 @@ class User():
 		email = parsed_json["email"]
 		password = parsed_json["password"]
 		name = parsed_json["name"]
-		tags = parset_json["tags"]
+	
 
 		if User_DBModel.query.filter_by(email = email).first() is None:
 			id = str(uuid.uuid4())
-			user = User_DBModel(id, name, password, email, tags, [], [])
+			user = User_DBModel(id, name, password, email, None, None, None)
 			db.session.add(user)
 			db.session.commit()
 
@@ -116,73 +112,59 @@ class User():
 		return_string = json.dumps(return_dict, sort_keys=True, indent=4, seperators=(',',': '))
 		return return_string
 
-	def add_user_tags():
-		if 'user' in session.keys():
-			user = session['user']
-			parsed_json = request.get_json()
-			user_info = User_DBModel.query.filter_by(id = user["id"]).first()
-			user_info.tags.append(parsed_json['added_tag'])
-
-			db.session.commit()
-			return_dict = {'code': 200}
-			return_string = json.dumps(return_dict, sort_keys=True, indent=4, seperators=(',',': '))
-			return return_string
-		else:
-			dict_local = {'code': 31, 'message': "auth error"}
-			return_string = json.dumps(dict_local, sort_keys=True, indent=4, separators=(',', ': '))
-			return return_string
-
 	def add_user_follower():
-		if 'user' in session.keys():
-			user = session['user']
-			parsed_json = request.get_json()
-			user_info = User_DBModel.query.filter_by(id = user["id"]).first()
-			user_info.followers.append(parsed_json['added_followers'])
-
-			db.session.commit()
-			return_dict = {'code': 200}
-			return_string = json.dumps(return_dict, sort_keys=True, indent=4, seperators=(',',': '))
-			return return_string
-		else:
-			dict_local = {'code': 31, 'message': "auth error"}
-			return_string = json.dumps(dict_local, sort_keys=True, indent=4, separators=(',', ': '))
-			return return_string
-
-	def add_user_following():
-	if 'user' in session.keys():
-		user = session['user']
 		parsed_json = request.get_json()
-		user_info = User_DBModel.query.filter_by(id = user["id"]).first()
-		user_info.following.append(parsed_json['added_following'])
-
+		user_info = User_DBModel.query.filter_by(id = parsed_json["id"]).first()
+		if (user_info.followers == None):
+			user_info.followers = parsed_json['added_followers']
+		else:
+			if (parsed_json['added_followers'] not in user_info.followers):
+				user_info.followers += ";" + parsed_json['added_followers']
+		db.session.add(user_info)
 		db.session.commit()
 		return_dict = {'code': 200}
-		return_string = json.dumps(return_dict, sort_keys=True, indent=4, seperators=(',',': '))
+		return_string = json.dumps(return_dict, sort_keys=True, indent=4, separators=(',',':'))
 		return return_string
-	else:
-		dict_local = {'code': 31, 'message': "auth error"}
-		return_string = json.dumps(dict_local, sort_keys=True, indent=4, separators=(',', ': '))
+	
+
+	def add_user_following():
+	
+
+		parsed_json = request.get_json()
+		user_info = User_DBModel.query.filter_by(id = parsed_json["id"]).first()
+		if (user_info.following == None):
+			user_info.following = parsed_json["added_following"]
+		else:
+			if (parsed_json["added_following"] not in user_info.following):
+				user_info.following += ";" + parsed_json["added_following"]
+		db.session.add(user_info)
+		db.session.commit()
+		return_dict = {'code': 200}
+		return_string = json.dumps(return_dict, sort_keys=True, indent=4, separators=(',',':'))
 		return return_string
 
 	def remove_user_following():
-	if 'user' in session.keys():
-		user = session['user']
-		parsed_json = request.get_json()
-		user_info = User_DBModel.query.filter_by(id = user["id"]).first()
-		if parsed_json['removed_following'] in user_info.following:
-			user_info.following.remove(parsed_json['removed_following'])
+	
 
+		parsed_json = request.get_json()
+		user_info = User_DBModel.query.filter_by(id = parsed_json["id"]).first()
+		if parsed_json['removed_following'] in user_info.following:
+			splitFollowing = parsed_json["removed_following"].split(';')
+			s = ""
+			for (var in splitFollowing):
+				if (parsed_json['removed_following'] not in var):
+					s += parsed_json['removed_following']
+			user_info.following.remove(parsed_json["removed_following"])
+
+
+		db.session.add(user_info)
 		db.session.commit()
 		return_dict = {'code': 200}
 		return_string = json.dumps(return_dict, sort_keys=True, indent=4, seperators=(',',': '))
 		return return_string
-	else:
-		dict_local = {'code': 31, 'message': "auth error"}
-		return_string = json.dumps(dict_local, sort_keys=True, indent=4, separators=(',', ': '))
-		return return_string
-
+	
 	def remove_user_follower():
-	if 'user' in session.keys():
+	
 		user = session['user']
 		parsed_json = request.get_json()
 		user_info = User_DBModel.query.filter_by(id = user["id"]).first()
@@ -193,10 +175,7 @@ class User():
 		return_dict = {'code': 200}
 		return_string = json.dumps(return_dict, sort_keys=True, indent=4, seperators=(',',': '))
 		return return_string
-	else:
-		dict_local = {'code': 31, 'message': "auth error"}
-		return_string = json.dumps(dict_local, sort_keys=True, indent=4, separators=(',', ': '))
-		return return_string
+	
 
 	@staticmethod
 	def update_user_info():
@@ -233,7 +212,6 @@ class User():
 				'id': user_info.id,
 				'email': user_info.email,
 				'name': user_info.name,
-				'tags': user_info.tags,
 				'following': user_info.following,
 				'followers': user_info.followers
 			}
