@@ -17,6 +17,8 @@
 		4F0AFC20204A4284008D4FD9 /* UploadLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC1F204A4284008D4FD9 /* UploadLinkViewController.swift */; };
 		4F0AFC22204A42AB008D4FD9 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC21204A42AB008D4FD9 /* RecipeDetailsViewController.swift */; };
 		4F0AFC24204A42DC008D4FD9 /* RecipeStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */; };
+		4F0AFC26204A4B40008D4FD9 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC25204A4B40008D4FD9 /* RecipeTableViewCell.swift */; };
+		4F0AFC28204A615A008D4FD9 /* chicken.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F0AFC27204A6159008D4FD9 /* chicken.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		4F0AFC1F204A4284008D4FD9 /* UploadLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLinkViewController.swift; sourceTree = "<group>"; };
 		4F0AFC21204A42AB008D4FD9 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStepsViewController.swift; sourceTree = "<group>"; };
+		4F0AFC25204A4B40008D4FD9 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		4F0AFC27204A6159008D4FD9 /* chicken.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicken.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		4F0AFBFC204A3789008D4FD9 /* Foodzi */ = {
 			isa = PBXGroup;
 			children = (
+				4F0AFC27204A6159008D4FD9 /* chicken.jpg */,
 				4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */,
 				4F0AFC21204A42AB008D4FD9 /* RecipeDetailsViewController.swift */,
 				4F0AFBFD204A3789008D4FD9 /* AppDelegate.swift */,
@@ -92,6 +97,7 @@
 				4F0AFC1D204A4205008D4FD9 /* NewRecipeViewController.swift */,
 				4F0AFC01204A3789008D4FD9 /* Main.storyboard */,
 				4F0AFC1F204A4284008D4FD9 /* UploadLinkViewController.swift */,
+				4F0AFC25204A4B40008D4FD9 /* RecipeTableViewCell.swift */,
 				4F0AFC04204A3789008D4FD9 /* Assets.xcassets */,
 				4F0AFC06204A3789008D4FD9 /* LaunchScreen.storyboard */,
 				4F0AFC09204A3789008D4FD9 /* Info.plist */,
@@ -194,6 +200,7 @@
 				4F0AFC08204A3789008D4FD9 /* LaunchScreen.storyboard in Resources */,
 				4F0AFC05204A3789008D4FD9 /* Assets.xcassets in Resources */,
 				4F0AFC03204A3789008D4FD9 /* Main.storyboard in Resources */,
+				4F0AFC28204A615A008D4FD9 /* chicken.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +221,7 @@
 				4F0AFC24204A42DC008D4FD9 /* RecipeStepsViewController.swift in Sources */,
 				4F0AFC00204A3789008D4FD9 /* ViewController.swift in Sources */,
 				4F0AFBFE204A3789008D4FD9 /* AppDelegate.swift in Sources */,
+				4F0AFC26204A4B40008D4FD9 /* RecipeTableViewCell.swift in Sources */,
 				4F0AFC1E204A4205008D4FD9 /* NewRecipeViewController.swift in Sources */,
 				4F0AFC22204A42AB008D4FD9 /* RecipeDetailsViewController.swift in Sources */,
 				4F0AFC20204A4284008D4FD9 /* UploadLinkViewController.swift in Sources */,
