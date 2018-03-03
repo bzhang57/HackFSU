@@ -26,6 +26,7 @@ class RecipeStepsViewController: UIViewController {
         super.viewDidLoad()
         instruction.text = directions[0]
         name.text = nameText
+        stepNumber.text = String(step + 1) + " / " + String(directions.count)
     }
 
     override func didReceiveMemoryWarning() {
