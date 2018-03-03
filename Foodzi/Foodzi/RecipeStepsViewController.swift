@@ -27,6 +27,10 @@ class RecipeStepsViewController: UIViewController {
         instruction.text = directions[0]
         name.text = nameText
         stepNumber.text = String(step + 1) + " / " + String(directions.count)
+        back.isHidden = true
+        if (directions.count == 1) {
+            forward.isHidden = true;
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,19 +40,30 @@ class RecipeStepsViewController: UIViewController {
     
     @IBAction func next(_ sender: Any) {
         step += 1
-        if (step >= directions.count) {
+        if (step == directions.count - 1) {
             print("finish")
+            forward.isHidden = true;
+            stepNumber.text = String(step + 1) + " / " + String(directions.count)
+            step = directions.count - 1
         } else {
             instruction.text = directions[step]
             stepNumber.text = String(step + 1) + " / " + String(directions.count)
+            back.isHidden = false;
         }
     }
     
     @IBAction func back(_ sender: Any) {
         step -= 1
-        if (step >= 0) {
+        if (step > 0) {
             instruction.text = directions[step]
             stepNumber.text = String(step + 1) + " / " + String(directions.count)
+            back.isHidden = false
+            forward.isHidden = false
+        } else {
+            step = 0
+            instruction.text = directions[step]
+            stepNumber.text = String(step + 1) + " / " + String(directions.count)
+            back.isHidden = true
         }
     }
     /*
