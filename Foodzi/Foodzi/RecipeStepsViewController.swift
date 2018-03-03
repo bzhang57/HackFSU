@@ -12,16 +12,18 @@ class RecipeStepsViewController: UIViewController {
     
     let directions = ["a", "b", "c"]
     var step = 0
-
+    var nameText = ""
+    
     @IBOutlet weak var forward: UIButton!
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var instruction: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         instruction.text = directions[0]
-        // Do any additional setup after loading the view.
+        name.text = nameText
     }
 
     override func didReceiveMemoryWarning() {

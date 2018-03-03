@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mdD-J8-sNZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,6 +28,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ai-Vj-Qem">
                                 <rect key="frame" x="0.0" y="632" width="375" height="30"/>
                                 <state key="normal" title="Add New Recipe"/>
+                                <connections>
+                                    <action selector="addNewRecipe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnO-MX-uuk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkr-lt-8jc">
                                 <rect key="frame" x="0.0" y="86.5" width="375" height="21"/>
@@ -108,6 +111,7 @@
                     <connections>
                         <outlet property="mealHistoryTableView" destination="J58-fw-LNU" id="F4n-Jd-cfK"/>
                         <segue destination="ubw-DC-vaC" kind="show" identifier="startToRecipeSegue" id="OZa-pQ-o81"/>
+                        <segue destination="r2g-Sh-RCf" kind="show" identifier="startToUploadSegue" id="Y3J-qs-DSr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -158,11 +162,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpe-84-GYJ">
-                                <rect key="frame" x="140" y="617" width="95" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Cooking"/>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yo5-jg-Sm7" customClass="DirectionTableView" customModule="Foodzi" customModuleProvider="target">
                                 <rect key="frame" x="16" y="317" width="343" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -247,6 +246,14 @@
                                     <action selector="edit:" destination="ubw-DC-vaC" eventType="touchUpInside" id="RXy-Bj-GtG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpe-84-GYJ">
+                                <rect key="frame" x="140" y="617" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Cooking"/>
+                                <connections>
+                                    <action selector="startCookingButton:" destination="ubw-DC-vaC" eventType="touchUpInside" id="igt-wx-VMB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="o16-QM-4rP"/>
@@ -260,6 +267,7 @@
                         <outlet property="ingredientTable" destination="skx-Ne-Z88" id="7RG-cs-h0u"/>
                         <outlet property="recipeName" destination="Owv-rk-fkI" id="4fL-kc-P5c"/>
                         <outlet property="start" destination="Rpe-84-GYJ" id="DuJ-wA-VIq"/>
+                        <segue destination="mdD-J8-sNZ" kind="show" identifier="detailsToInstructionsSegue" id="u92-Gh-XGQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80N-6X-VSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,6 +350,9 @@
                                         <rect key="frame" x="0.0" y="71" width="168" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Create Own Recipe"/>
+                                        <connections>
+                                            <segue destination="ubw-DC-vaC" kind="show" id="r1H-gb-nXD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -384,6 +395,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqh-kS-oYC">
                                 <rect key="frame" x="146" y="210" width="82" height="30"/>
                                 <state key="normal" title="Upload Link"/>
+                                <connections>
+                                    <action selector="UploadLinkAction:" destination="JCz-E3-9ko" eventType="touchUpInside" id="1yh-fz-z3s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -396,10 +410,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VwF-Px-IQH"/>
                     </view>
+                    <connections>
+                        <outlet property="uploadLinkTextField" destination="TRX-xm-ZOG" id="I2X-Nv-Up3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hZ-sb-gAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1680.8" y="112.89355322338831"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="r1H-gb-nXD"/>
+    </inferredMetricsTieBreakers>
 </document>

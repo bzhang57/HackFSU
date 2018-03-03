@@ -53,6 +53,9 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var edit: UIButton!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addIngredients.isHidden = true
@@ -103,5 +106,17 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func startCookingButton(_ sender: Any) {
+        performSegue(withIdentifier: "detailsToInstructionsSegue", sender: Any?.self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "detailsToInstructionsSegue"),
+            
+            let destination = segue.destination as? RecipeStepsViewController
+            
+        {
+            destination.nameText = name
+        }
+    }
 }
