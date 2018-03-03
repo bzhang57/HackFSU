@@ -15,11 +15,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let cookingTimes = ["45", "45", "35", "30", "25"]
     let recipeImages = [#imageLiteral(resourceName: "chicken.jpg"), #imageLiteral(resourceName: "steak.jpg"), #imageLiteral(resourceName: "pork.jpg"), #imageLiteral(resourceName: "ramen.jpg"), #imageLiteral(resourceName: "sushi.jpg")]
     var selectedRow = 0
+    var name = ""
     @IBOutlet weak var mealHistoryTableView: UITableView!
+    
+    @IBAction func addNewRecipe(_ sender: Any) {
+        performSegue(withIdentifier: "startToUploadSegue", sender: Any?.self)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mealHistoryTableView.delegate = self
         mealHistoryTableView.dataSource = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +67,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             destination.name = recipeNames[selectedRow]
         }
-        
+        if (segue.identifier == "startToUploadSegue"),
+            let destination = segue.destination as? NewRecipeViewController
+        {
+        }
     }
 
 }

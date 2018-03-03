@@ -21,8 +21,15 @@ class UploadLinkViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var uploadLinkTextField: UITextField!
     
-
+    @IBAction func UploadLinkAction(_ sender: UIButton) {
+        var url = NSURL(string: "https://www.allrecipes.com/recipe/240208/simple-baked-chicken-breasts/")
+        
+        print("HTML : \(myHTMLString)")
+       
+    }
+    
     /*
     // MARK: - Navigation
 
