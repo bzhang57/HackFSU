@@ -9,10 +9,18 @@
 import UIKit
 
 class RecipeStepsViewController: UIViewController {
+    
+    let directions = ["a", "b", "c"]
+    var step = 0
 
+    @IBOutlet weak var forward: UIButton!
+    @IBOutlet weak var back: UIButton!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var instruction: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        instruction.text = directions[0]
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +29,21 @@ class RecipeStepsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func next(_ sender: Any) {
+        step += 1
+        if (step >= directions.count) {
+            print("finish")
+        } else {
+            instruction.text = directions[step]
+        }
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        step -= 1
+        if (step >= 0) {
+            instruction.text = directions[step]
+        }
+    }
     /*
     // MARK: - Navigation
 
