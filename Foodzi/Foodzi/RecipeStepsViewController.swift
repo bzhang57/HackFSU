@@ -39,7 +39,7 @@ class RecipeStepsViewController: UIViewController {
             print("finish")
         } else {
             instruction.text = directions[step]
-            stepNumber.text = String(step) + " / " + String(directions.count)
+            stepNumber.text = String(step + 1) + " / " + String(directions.count)
         }
     }
     
@@ -47,6 +47,7 @@ class RecipeStepsViewController: UIViewController {
         step -= 1
         if (step >= 0) {
             instruction.text = directions[step]
+            stepNumber.text = String(step + 1) + " / " + String(directions.count)
         }
     }
     /*
