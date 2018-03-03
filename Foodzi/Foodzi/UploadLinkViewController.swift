@@ -27,8 +27,8 @@ class UploadLinkViewController: UIViewController {
         var url = NSURL(string: "https://www.allrecipes.com/recipe/240208/simple-baked-chicken-breasts/")
         
 //        print("HTML : \(myHTMLString)")
-//
-//    }
+       
+    }
     
     /*
     // MARK: - Navigation

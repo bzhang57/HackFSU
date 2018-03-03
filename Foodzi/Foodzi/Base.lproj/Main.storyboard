@@ -142,11 +142,6 @@
                                     <action selector="addIngredient:" destination="ubw-DC-vaC" eventType="touchUpInside" id="Dh6-gc-7LM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAG-lq-Kme">
-                                <rect key="frame" x="14" y="20" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                            </button>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="cL5-7D-UxG">
                                 <rect key="frame" x="14" y="110" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -261,7 +256,6 @@
                     <connections>
                         <outlet property="addDirections" destination="3EY-3k-kmR" id="NFG-GY-0Mb"/>
                         <outlet property="addIngredients" destination="EWK-wR-CtV" id="5b4-IB-8Ny"/>
-                        <outlet property="back" destination="LAG-lq-Kme" id="Ree-gA-6yh"/>
                         <outlet property="directionTable" destination="yo5-jg-Sm7" id="vAj-R4-gi6"/>
                         <outlet property="edit" destination="alZ-Ep-Cbe" id="8S7-41-mEE"/>
                         <outlet property="ingredientTable" destination="skx-Ne-Z88" id="7RG-cs-h0u"/>
@@ -305,8 +299,20 @@
                                     <action selector="back:" destination="mdD-J8-sNZ" eventType="touchUpInside" id="85g-zr-RgV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWd-xJ-G40">
-                                <rect key="frame" x="165" y="194" width="45" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWd-xJ-G40">
+                                <rect key="frame" x="16" y="194" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smc-ai-Ca9">
+                                <rect key="frame" x="172" y="595" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l43-PR-hzi">
+                                <rect key="frame" x="16" y="20" width="51" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -321,11 +327,12 @@
                         <outlet property="forward" destination="hu7-zT-Xk5" id="vBe-CU-0he"/>
                         <outlet property="instruction" destination="VQT-xv-ffc" id="Yl9-xH-pzd"/>
                         <outlet property="name" destination="PWd-xJ-G40" id="VaM-6h-m2S"/>
+                        <outlet property="stepNumber" destination="l43-PR-hzi" id="xsC-be-Gu7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaM-He-jhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.80000000000001" y="1503.5982008995504"/>
+            <point key="canvasLocation" x="116" y="1539.5802098950526"/>
         </scene>
         <!--New Recipe View Controller-->
         <scene sceneID="aNb-8C-YCy">
@@ -420,6 +427,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="r1H-gb-nXD"/>
+        <segue reference="OZa-pQ-o81"/>
     </inferredMetricsTieBreakers>
 </document>

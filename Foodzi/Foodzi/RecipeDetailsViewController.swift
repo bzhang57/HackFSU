@@ -97,15 +97,6 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         self.directionTable.reloadData()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func startCookingButton(_ sender: Any) {
         performSegue(withIdentifier: "detailsToInstructionsSegue", sender: Any?.self)
     }
@@ -117,6 +108,8 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
             
         {
             destination.nameText = name
+            destination.ingredients = ingredients
+            destination.directions = directions
         }
     }
 }

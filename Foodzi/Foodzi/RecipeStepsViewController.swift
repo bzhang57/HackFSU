@@ -10,7 +10,8 @@ import UIKit
 
 class RecipeStepsViewController: UIViewController {
     
-    let directions = ["a", "b", "c"]
+    var directions = [String]()
+    var ingredients = [String]()
     var step = 0
     var nameText = ""
     
@@ -18,7 +19,8 @@ class RecipeStepsViewController: UIViewController {
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var instruction: UILabel!
-
+    @IBOutlet weak var stepNumber: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,7 @@ class RecipeStepsViewController: UIViewController {
             print("finish")
         } else {
             instruction.text = directions[step]
+            stepNumber.text = String(step) + " / " + String(directions.count)
         }
     }
     
