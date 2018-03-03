@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let recipeNames = ["Chicken", "Steak", "Pork", "Ramen", "Sushi"]
     let cookingTimes = ["45", "45", "35", "30", "25"]
     let recipeImages = [#imageLiteral(resourceName: "chicken.jpg"), #imageLiteral(resourceName: "steak.jpg"), #imageLiteral(resourceName: "pork.jpg"), #imageLiteral(resourceName: "ramen.jpg"), #imageLiteral(resourceName: "sushi.jpg")]
+    let recipeRatings = ["3", "3.5", "4", "4.5", "5"]
+    let cookNames = ["Jonathan", "Bryan", "Ray", "Kelly", "Chris"]
     var selectedRow = 0
     var name = ""
     @IBOutlet weak var mealHistoryTableView: UITableView!
@@ -46,8 +48,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bigz") as! RecipeTableViewCell
         cell.recipeName.text = recipeNames[count]
-        cell.timeLabel.text = cookingTimes[count]
+        cell.timeLabel.text = cookingTimes[count] + "\n mins"
         cell.recipeImage.image = recipeImages[count]
+        cell.recipeRating.text = recipeRatings[count]
+        cell.cookName.text = "Recipe submitted by \n" + cookNames[count] 
         count = count + 1
         return cell
     }
