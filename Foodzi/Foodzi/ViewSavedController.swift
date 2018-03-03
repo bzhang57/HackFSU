@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewSavedController: UIViewController {
+class ViewSavedController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var count = 0
     let recipeNames = ["Chicken", "Steak", "Pork", "Ramen", "Sushi"]

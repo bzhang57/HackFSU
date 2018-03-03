@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewProfileController: UIViewController {
-
+class ViewProfileController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var count = 0
     let recipeNames = ["Chicken", "Steak", "Pork", "Ramen", "Sushi"]
     let cookingTimes = ["45", "45", "35", "30", "25"]
@@ -29,7 +28,7 @@ class ViewProfileController: UIViewController {
         super.viewDidLoad()
         mealHistoryTableView.delegate = self
         mealHistoryTableView.dataSource = self
-        
+
     }
     
     override func didReceiveMemoryWarning() {
