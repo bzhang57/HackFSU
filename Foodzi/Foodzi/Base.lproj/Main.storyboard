@@ -138,11 +138,6 @@
                                     <action selector="addIngredient:" destination="ubw-DC-vaC" eventType="touchUpInside" id="Dh6-gc-7LM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAG-lq-Kme">
-                                <rect key="frame" x="14" y="20" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                            </button>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="cL5-7D-UxG">
                                 <rect key="frame" x="14" y="110" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -254,7 +249,6 @@
                     <connections>
                         <outlet property="addDirections" destination="3EY-3k-kmR" id="NFG-GY-0Mb"/>
                         <outlet property="addIngredients" destination="EWK-wR-CtV" id="5b4-IB-8Ny"/>
-                        <outlet property="back" destination="LAG-lq-Kme" id="Ree-gA-6yh"/>
                         <outlet property="directionTable" destination="yo5-jg-Sm7" id="vAj-R4-gi6"/>
                         <outlet property="edit" destination="alZ-Ep-Cbe" id="8S7-41-mEE"/>
                         <outlet property="ingredientTable" destination="skx-Ne-Z88" id="7RG-cs-h0u"/>
@@ -298,17 +292,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload Link/create recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLr-cm-JlC">
-                                <rect key="frame" x="166" y="323" width="209" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="i6P-pV-k7U">
+                                <rect key="frame" x="103" y="280" width="460" height="107"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tt-Nb-Sys">
+                                        <rect key="frame" x="178" y="0.0" width="104" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Upload Link"/>
+                                        <connections>
+                                            <segue destination="JCz-E3-9ko" kind="show" id="1Dx-M6-4q6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyN-on-EzO">
+                                        <rect key="frame" x="146" y="71" width="168" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Create Own Recipe"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i6P-pV-k7U" firstAttribute="top" secondItem="556-fa-RIA" secondAttribute="top" constant="257" id="BQj-eZ-c27"/>
+                            <constraint firstItem="i6P-pV-k7U" firstAttribute="leading" secondItem="556-fa-RIA" secondAttribute="leading" constant="104" id="Jyr-11-Aqh"/>
+                            <constraint firstItem="556-fa-RIA" firstAttribute="trailing" secondItem="i6P-pV-k7U" secondAttribute="trailing" constant="103" id="L8I-i9-cwB"/>
+                            <constraint firstItem="i6P-pV-k7U" firstAttribute="leading" secondItem="556-fa-RIA" secondAttribute="leading" constant="104" id="NYJ-wV-NuJ"/>
+                            <constraint firstItem="i6P-pV-k7U" firstAttribute="leading" secondItem="556-fa-RIA" secondAttribute="leading" constant="104" id="S7N-mp-pf4"/>
+                            <constraint firstItem="556-fa-RIA" firstAttribute="trailing" secondItem="i6P-pV-k7U" secondAttribute="trailing" constant="103" id="Vcm-hI-Pqy"/>
+                            <constraint firstItem="i6P-pV-k7U" firstAttribute="top" secondItem="556-fa-RIA" secondAttribute="top" constant="257" id="pl8-o5-Gdy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="556-fa-RIA"/>
                     </view>
+                    <connections>
+                        <outlet property="CreateNewRecipeButton" destination="AyN-on-EzO" id="c51-vh-2mO"/>
+                        <outlet property="UploadLinkButton" destination="2Tt-Nb-Sys" id="eiE-7C-Oqu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0BP-Mc-2tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

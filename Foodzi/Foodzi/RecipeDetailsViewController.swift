@@ -11,16 +11,28 @@ import UIKit
 class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ingredients.count
+        var count:Int?
+        if (tableView == ingredientTable) {
+            count = ingredients.count
+        } else {
+            count = directions.count
+        }
+        return count!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: IngredientTableViewCell = IngredientTableViewCell(style: .subtitle, reuseIdentifier: "tableCell")
+        var cell: UITableViewCell?
         
-        cell.textLabel?.text = "hello"
+        if (tableView == self.ingredientTable) {
+            cell = IngredientTableViewCell(style: .subtitle, reuseIdentifier: "tableCell")
+            cell?.textLabel?.text = ingredients[indexPath.item]
+        } else {
+            cell = DirectionTableViewCell(style: .subtitle, reuseIdentifier: "tableCell")
+            cell?.textLabel?.text = directions[indexPath.item]
+        }
         
-        return cell
+        return cell!
     }
     
 //    func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,9 +40,10 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
 //    }
     
     var edit_hidden = true
-    var ingredients = [] as Array
-    var directions = [] as Array
     var name = ""
+    var ingredients = [String]()
+    var directions = [String]()
+    
     @IBOutlet weak var recipeName: UILabel!
     @IBOutlet weak var ingredientTable: IngredientTableView!
     @IBOutlet weak var directionTable: DirectionTableView!
@@ -47,6 +60,8 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         directionTable.dataSource = self
         directionTable.delegate = self
         recipeName.text = name
+        ingredientTable.dataSource = self
+        ingredientTable.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,13 +85,13 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @IBAction func addIngredient(_ sender: Any) {
-        ingredients.append(("1/2 cup", "salt"))
-        print(ingredients)
+        ingredients.append("1/2 cup salt")
+        self.ingredientTable.reloadData()
     }
     
     @IBAction func addDirection(_ sender: Any) {
-        directions.append(("1.", "Preheat"))
-        print(directions)
+        directions.append("1. Preheat")
+        self.directionTable.reloadData()
     }
     
     /*
