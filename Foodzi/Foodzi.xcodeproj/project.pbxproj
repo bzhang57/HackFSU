@@ -23,6 +23,7 @@
 		4F0AFC22204A42AB008D4FD9 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC21204A42AB008D4FD9 /* RecipeDetailsViewController.swift */; };
 		4F0AFC24204A42DC008D4FD9 /* RecipeStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */; };
 		4F0AFC26204A4B40008D4FD9 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC25204A4B40008D4FD9 /* RecipeTableViewCell.swift */; };
+		A21A66F3204B0D0B0071758A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A66F2204B0D0B0071758A /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		4F0AFC21204A42AB008D4FD9 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStepsViewController.swift; sourceTree = "<group>"; };
 		4F0AFC25204A4B40008D4FD9 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		A21A66F2204B0D0B0071758A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				4D21611C204AE666007CA9BD /* AddIngredientsViewController.swift */,
 				4F0AFC1D204A4205008D4FD9 /* NewRecipeViewController.swift */,
 				4F0AFC01204A3789008D4FD9 /* Main.storyboard */,
+				A21A66F2204B0D0B0071758A /* LoginViewController.swift */,
 				4F0AFC1F204A4284008D4FD9 /* UploadLinkViewController.swift */,
 				4F0AFC25204A4B40008D4FD9 /* RecipeTableViewCell.swift */,
 				4F0AFC04204A3789008D4FD9 /* Assets.xcassets */,
@@ -240,6 +243,7 @@
 				4F0AFC1E204A4205008D4FD9 /* NewRecipeViewController.swift in Sources */,
 				4D21611D204AE666007CA9BD /* AddIngredientsViewController.swift in Sources */,
 				4F0AFC22204A42AB008D4FD9 /* RecipeDetailsViewController.swift in Sources */,
+				A21A66F3204B0D0B0071758A /* LoginViewController.swift in Sources */,
 				4F0AFC20204A4284008D4FD9 /* UploadLinkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
