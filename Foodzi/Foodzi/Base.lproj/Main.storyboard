@@ -193,15 +193,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="er0-zD-Pve">
-                                <rect key="frame" x="140" y="378" width="119" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert Link Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TRX-xm-ZOG">
+                                <rect key="frame" x="15" y="170" width="290" height="30"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqh-kS-oYC">
+                                <rect key="frame" x="118.5" y="210" width="82" height="30"/>
+                                <state key="normal" title="Upload Link"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VwF-Px-IQH" firstAttribute="trailing" secondItem="TRX-xm-ZOG" secondAttribute="trailing" constant="15" id="EaT-yj-hUP"/>
+                            <constraint firstItem="Aqh-kS-oYC" firstAttribute="top" secondItem="TRX-xm-ZOG" secondAttribute="bottom" constant="10" id="IBg-Tj-fz5"/>
+                            <constraint firstItem="TRX-xm-ZOG" firstAttribute="top" secondItem="VwF-Px-IQH" secondAttribute="top" constant="150" id="YPV-SO-p3g"/>
+                            <constraint firstItem="TRX-xm-ZOG" firstAttribute="leading" secondItem="VwF-Px-IQH" secondAttribute="leading" constant="15" id="eOb-2a-AUi"/>
+                            <constraint firstItem="Aqh-kS-oYC" firstAttribute="centerX" secondItem="TRX-xm-ZOG" secondAttribute="centerX" id="epP-jd-cWw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VwF-Px-IQH"/>
                     </view>
                 </viewController>
