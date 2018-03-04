@@ -799,14 +799,24 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Account:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HN-D1-hMI">
+                                <rect key="frame" x="35" y="167" width="305" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GNO-53-SxH" firstAttribute="trailing" secondItem="C7i-8t-LmV" secondAttribute="trailing" constant="35" id="67R-Kw-HIe"/>
+                            <constraint firstItem="4HN-D1-hMI" firstAttribute="leading" secondItem="GNO-53-SxH" secondAttribute="leading" constant="35" id="MiV-qO-EHG"/>
+                            <constraint firstItem="C7i-8t-LmV" firstAttribute="top" secondItem="4HN-D1-hMI" secondAttribute="bottom" constant="8" id="T81-xB-ItR"/>
                             <constraint firstItem="lsd-Fe-8ZE" firstAttribute="leading" secondItem="GNO-53-SxH" secondAttribute="leading" constant="12" id="eUI-2h-vZJ"/>
                             <constraint firstItem="lsd-Fe-8ZE" firstAttribute="top" secondItem="GNO-53-SxH" secondAttribute="top" constant="16" id="fi9-qT-V0Z"/>
                             <constraint firstItem="C7i-8t-LmV" firstAttribute="leading" secondItem="GNO-53-SxH" secondAttribute="leading" constant="35" id="gMp-5m-SsI"/>
+                            <constraint firstItem="4HN-D1-hMI" firstAttribute="top" secondItem="lsd-Fe-8ZE" secondAttribute="bottom" constant="19" id="gvs-K8-OpT"/>
                             <constraint firstAttribute="trailing" secondItem="lsd-Fe-8ZE" secondAttribute="trailing" constant="12" id="hQk-Ey-5m0"/>
+                            <constraint firstItem="GNO-53-SxH" firstAttribute="trailing" secondItem="4HN-D1-hMI" secondAttribute="trailing" constant="35" id="lPG-2A-QYA"/>
                             <constraint firstItem="C7i-8t-LmV" firstAttribute="top" secondItem="lsd-Fe-8ZE" secondAttribute="bottom" constant="48" id="tZk-AG-PvH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GNO-53-SxH"/>
@@ -814,7 +824,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBv-K4-Xar" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-986" y="766"/>
+            <point key="canvasLocation" x="-986.39999999999998" y="765.96701649175418"/>
         </scene>
         <!--View Profile Controller-->
         <scene sceneID="tNb-LP-4GC">
