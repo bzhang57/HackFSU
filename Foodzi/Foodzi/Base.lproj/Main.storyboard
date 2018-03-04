@@ -369,11 +369,7 @@
                             <constraint firstItem="D6w-HW-WIC" firstAttribute="bottom" secondItem="WiZ-fo-5wM" secondAttribute="bottom" constant="5" id="vaQ-op-M3b"/>
                             <constraint firstItem="WiZ-fo-5wM" firstAttribute="top" secondItem="J58-fw-LNU" secondAttribute="bottom" constant="5" id="xCi-1S-O1z"/>
                         </constraints>
-<<<<<<< HEAD
                         <viewLayoutGuide key="safeArea" id="D6w-HW-WIC"/>
-=======
-                        <viewLayoutGuide key="safeArea" id="s5c-uc-H0W"/>
->>>>>>> KellyBranch
                     </view>
                     <connections>
                         <outlet property="mealHistoryTableView" destination="J58-fw-LNU" id="F4n-Jd-cfK"/>
