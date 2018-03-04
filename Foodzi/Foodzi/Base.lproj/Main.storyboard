@@ -441,7 +441,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80N-6X-VSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ubO-uF-3a4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="636" y="1769"/>
+            <point key="canvasLocation" x="796" y="1492"/>
         </scene>
         <!--Add Ingredients View Controller-->
         <scene sceneID="fVv-kG-4lT">
@@ -503,7 +503,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnz-6n-O4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="xAm-FV-xRg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1194" y="1394"/>
+            <point key="canvasLocation" x="1183" y="748"/>
         </scene>
         <!--Recipe Steps View Controller-->
         <scene sceneID="fOb-ad-LVm">
@@ -574,63 +574,6 @@
                 <exit id="aOc-Ev-xNr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-105" y="2098"/>
-        </scene>
-        <!--New Recipe View Controller-->
-        <scene sceneID="aNb-8C-YCy">
-            <objects>
-                <viewController id="r2g-Sh-RCf" customClass="NewRecipeViewController" customModule="Foodzi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ux4-kT-mR7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="i6P-pV-k7U">
-                                <rect key="frame" x="103" y="280" width="168" height="107"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tt-Nb-Sys">
-                                        <rect key="frame" x="32" y="0.0" width="104" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Upload Link"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyN-on-EzO">
-                                        <rect key="frame" x="0.0" y="71" width="168" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Create Own Recipe"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htY-LN-Wae">
-                                <rect key="frame" x="25" y="35" width="45" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="Dx9-Yo-qxi" kind="unwind" unwindAction="myUnwindActionNewRecipeToMainWithUnwindSegue:" id="PbF-Af-oxD"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="i6P-pV-k7U" firstAttribute="top" secondItem="556-fa-RIA" secondAttribute="top" constant="257" id="BQj-eZ-c27"/>
-                            <constraint firstItem="i6P-pV-k7U" firstAttribute="leading" secondItem="556-fa-RIA" secondAttribute="leading" constant="104" id="Jyr-11-Aqh"/>
-                            <constraint firstItem="556-fa-RIA" firstAttribute="trailing" secondItem="i6P-pV-k7U" secondAttribute="trailing" constant="103" id="L8I-i9-cwB"/>
-                            <constraint firstItem="i6P-pV-k7U" firstAttribute="leading" secondItem="556-fa-RIA" secondAttribute="leading" constant="104" id="NYJ-wV-NuJ"/>
-                            <constraint firstItem="htY-LN-Wae" firstAttribute="top" secondItem="556-fa-RIA" secondAttribute="top" id="RND-g3-fvM"/>
-                            <constraint firstItem="i6P-pV-k7U" firstAttribute="leading" secondItem="556-fa-RIA" secondAttribute="leading" constant="104" id="S7N-mp-pf4"/>
-                            <constraint firstItem="556-fa-RIA" firstAttribute="trailing" secondItem="i6P-pV-k7U" secondAttribute="trailing" constant="103" id="Vcm-hI-Pqy"/>
-                            <constraint firstItem="htY-LN-Wae" firstAttribute="leading" secondItem="556-fa-RIA" secondAttribute="leading" constant="25" id="jVm-Ar-ZaT"/>
-                            <constraint firstItem="htY-LN-Wae" firstAttribute="top" secondItem="556-fa-RIA" secondAttribute="top" constant="15" id="oes-Nf-iLI"/>
-                            <constraint firstItem="i6P-pV-k7U" firstAttribute="top" secondItem="556-fa-RIA" secondAttribute="top" constant="257" id="pl8-o5-Gdy"/>
-                            <constraint firstItem="556-fa-RIA" firstAttribute="trailing" secondItem="htY-LN-Wae" secondAttribute="trailing" constant="305" id="vLq-DG-NRN"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="556-fa-RIA"/>
-                    </view>
-                    <connections>
-                        <outlet property="CreateNewRecipeButton" destination="AyN-on-EzO" id="c51-vh-2mO"/>
-                        <outlet property="UploadLinkButton" destination="2Tt-Nb-Sys" id="eiE-7C-Oqu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0BP-Mc-2tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Dx9-Yo-qxi" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1903" y="1088"/>
         </scene>
         <!--View Saved Controller-->
         <scene sceneID="B0S-yy-YoQ">
