@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qax-65-B46">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ggw-Me-ifb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -816,12 +816,55 @@
                                     <constraint firstAttribute="height" constant="112" id="VoM-aj-3Dy"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C7i-8t-LmV">
+                                <rect key="frame" x="35" y="196" width="305" height="190"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEi-2A-F4Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-oB-wOP">
+                                        <rect key="frame" x="0.0" y="40" width="305" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zim-xu-01K">
+                                        <rect key="frame" x="0.0" y="80" width="305" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uV6-Je-7td">
+                                        <rect key="frame" x="0.0" y="120" width="305" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-jj-zXu">
+                                        <rect key="frame" x="0.0" y="160" width="305" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Get Cookin'!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didLogin:" destination="Qax-65-B46" eventType="touchUpInside" id="Ylr-rZ-W9j"/>
+                                            <action selector="login:" destination="Qax-65-B46" eventType="touchUpInside" id="PBR-Sm-hKZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GNO-53-SxH" firstAttribute="trailing" secondItem="C7i-8t-LmV" secondAttribute="trailing" constant="35" id="67R-Kw-HIe"/>
                             <constraint firstItem="lsd-Fe-8ZE" firstAttribute="leading" secondItem="GNO-53-SxH" secondAttribute="leading" constant="12" id="eUI-2h-vZJ"/>
                             <constraint firstItem="lsd-Fe-8ZE" firstAttribute="top" secondItem="GNO-53-SxH" secondAttribute="top" constant="16" id="fi9-qT-V0Z"/>
+                            <constraint firstItem="C7i-8t-LmV" firstAttribute="leading" secondItem="GNO-53-SxH" secondAttribute="leading" constant="35" id="gMp-5m-SsI"/>
                             <constraint firstAttribute="trailing" secondItem="lsd-Fe-8ZE" secondAttribute="trailing" constant="12" id="hQk-Ey-5m0"/>
+                            <constraint firstItem="C7i-8t-LmV" firstAttribute="top" secondItem="lsd-Fe-8ZE" secondAttribute="bottom" constant="48" id="tZk-AG-PvH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GNO-53-SxH"/>
                     </view>
