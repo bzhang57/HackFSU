@@ -7,8 +7,8 @@ import datetime
 
 class Follow_DBModel(db.Model):
 	__tablename__ = 'follows_db'
-	id = db.Column(db.Text, primary_key = True)
-	followers = db.Column(db.Text, primary_key = True)
+	id = db.Column(db.Text, db.ForeignKey('users.id', ondelete = 'CASCADE'), primary_key = True)
+	followers = db.Column(db.Text, db.ForeignKey('users.id', ondelete = 'CASCADE'), primary_key = True)
 
 
 	def __init__(self, i, followers):

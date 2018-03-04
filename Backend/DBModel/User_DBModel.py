@@ -12,18 +12,14 @@ class User_DBModel(db.Model):
 	email = db.Column(db.Text)
 	name = db.Column(db.Text)
 	password = db.Column(db.Text)
-	following = db.Column(db.Text)
-	followers = db.Column(db.Text)
-	saved_recipes = db.Column(db.Text)
 
-	def __init__(self, id, name, password, email, following, followers, saved_recipes):
+
+	def __init__(self, id, name, password, email):
 		self.id = id
 		self.name = name
 		self.password = password
 		self.email = email
-		self.following = following
-		self.followers = followers
-		self.saved_recipes = saved_recipes
+		
 
 	@staticmethod
 	def authenticate_email_password(email, password):

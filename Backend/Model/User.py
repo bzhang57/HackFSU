@@ -4,6 +4,7 @@ from flaskapp import db, app
 from flask import request, Response, send_file, send_from_directory, make_response, session
 from sqlalchemy.dialects.postgresql import JSON
 from DBModel.User_DBModel import User_DBModel
+from DBModel.Follow_DBModel import Follow_DBModel
 import datetime
 
 
@@ -89,7 +90,8 @@ class User():
 
 		if User_DBModel.query.filter_by(email = email).first() is None:
 			id = str(uuid.uuid4())
-			user = User_DBModel(id, name, password, email, None, None, None)
+			user = User_DBModel(id, name, password, email)
+
 			db.session.add(user)
 			db.session.commit()
 
@@ -101,80 +103,45 @@ class User():
 			return_string = json.dumps(return_json, sort_keys=True, indent=4, separators=(',', ': '))
 			return return_string
 
-	def add_new_recipe():
-		user = session['user']
-		parsed_json = request.get_json()
-		user_info = User_DBModel.query.filter_by(id = user["id"]).first()
-		user_info.saved_recipes.append(parsed_json['added_recipe'])
 
-		db.session.commit()
-		return_dict = {'code': 200}
-		return_string = json.dumps(return_dict, sort_keys=True, indent=4, seperators=(',',': '))
-		return return_string
 
-	def add_user_follower():
-		parsed_json = request.get_json()
-		user_info = User_DBModel.query.filter_by(id = parsed_json["id"]).first()
-		if (user_info.followers == None):
-			user_info.followers = parsed_json['added_followers']
-		else:
-			if (parsed_json['added_followers'] not in user_info.followers):
-				user_info.followers += ";" + parsed_json['added_followers']
-		db.session.add(user_info)
-		db.session.commit()
-		return_dict = {'code': 200}
-		return_string = json.dumps(return_dict, sort_keys=True, indent=4, separators=(',',':'))
-		return return_string
-	
 
 	def add_user_following():
 	
-
-		parsed_json = request.get_json()
-		user_info = User_DBModel.query.filter_by(id = parsed_json["id"]).first()
-		if (user_info.following == None):
-			user_info.following = parsed_json["added_following"]
+		if 'user' in session.keys:
+			user = session['user']
+			parsed_json = request.get_json()
+			user_following = parsed_json["added_following"]
+			follow = Follow_DBModel(user['id'], user_following)
+			
+			db.session.add(follow)
+			db.session.commit()
+			return_dict = {'code': 200}
+			return_string = json.dumps(return_dict, sort_keys=True, indent=4, separators=(',',':'))
+			return return_string
 		else:
-			if (parsed_json["added_following"] not in user_info.following):
-				user_info.following += ";" + parsed_json["added_following"]
-		db.session.add(user_info)
-		db.session.commit()
-		return_dict = {'code': 200}
-		return_string = json.dumps(return_dict, sort_keys=True, indent=4, separators=(',',':'))
-		return return_string
+			dict_local = {'code': 31, 'message': "auth error"}
+			return_string = json.dumps(dict_local, sort_keys=True, indent=4, separators=(',', ': '))
+			return return_string
 
 	def remove_user_following():
 	
+		if 'user' in session.keys:
+			user = session['user']
+			parsed_json = request.get_json()
+			
+			user_following = parsed_json["added_following"]
 
-		parsed_json = request.get_json()
-		user_info = User_DBModel.query.filter_by(id = parsed_json["id"]).first()
-		if parsed_json['removed_following'] in user_info.following:
-			splitFollowing = parsed_json["removed_following"].split(';')
-			s = ""
-			for (var in splitFollowing):
-				if (parsed_json['removed_following'] not in var):
-					s += parsed_json['removed_following']
-			user_info.following.remove(parsed_json["removed_following"])
-
-
-		db.session.add(user_info)
-		db.session.commit()
-		return_dict = {'code': 200}
-		return_string = json.dumps(return_dict, sort_keys=True, indent=4, seperators=(',',': '))
-		return return_string
-	
-	def remove_user_follower():
-	
-		user = session['user']
-		parsed_json = request.get_json()
-		user_info = User_DBModel.query.filter_by(id = user["id"]).first()
-		if parsed_json['removed_follower'] in user_info.follower:
-			user_info.following.remove(parsed_json['removed_follower'])
-
-		db.session.commit()
-		return_dict = {'code': 200}
-		return_string = json.dumps(return_dict, sort_keys=True, indent=4, seperators=(',',': '))
-		return return_string
+			unfollow = Follow_DBModel.query.filter_by(id = user["id"]).filter_by(following = user_following).first()
+			db.session.delete(unfollow)
+			db.session.commit()
+			return_dict = {'code': 200}
+			return_string = json.dumps(return_dict, sort_keys=True, indent=4, seperators=(',',': '))
+			return return_string
+		else:
+			dict_local = {'code': 31, 'message': "auth error"}
+			return_string = json.dumps(dict_local, sort_keys=True, indent=4, separators=(',', ': '))
+			return return_string
 	
 
 	@staticmethod
@@ -228,10 +195,10 @@ app.add_url_rule('/login', 'login', User.login, methods=['POST'])
 app.add_url_rule('/logoff', 'logoff', User.logoff, methods=['GET'])
 app.add_url_rule('/list_all_users', 'list_all_users', User.list_all_users, methods=['GET'])
 app.add_url_rule('/register_user', 'register_user', User.register_user, methods=['POST'])
-app.add_url_rule('/add_new_recipe', 'add_new_recipe', User.add_new_recipe, methods=['POST'])
-app.add_url_rule('/add_user_follower', 'add_user_follower', User.add_user_follower, methods=['POST'])
+
+
 app.add_url_rule('/add_user_following', 'add_user_following', User.add_user_following, methods=['POST'])
 app.add_url_rule('/remove_user_following', 'remove_user_following', User.remove_user_following, methods=['POST'])
-app.add_url_rule('/remove_user_follower', 'remove_user_follower', User.remove_user_follower, methods=['POST'])
+
 app.add_url_rule('/get_user_info', 'get_user_info', User.get_user_info, methods=['GET'])
 app.add_url_rule('/update_user_info', 'update_user_info', User.update_user_info, methods=['POST'])
