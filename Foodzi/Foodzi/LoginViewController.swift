@@ -41,7 +41,24 @@ class LoginViewController: UIViewController {
             //Display alert msg
             return;
         }
+        
+        //self.performSegue(withIdentifier: "loginToFeedSegue", sender: sender)
     }
+    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+  /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "loginToFeedSegue") {
+            let vc = segue.destination as! ViewController
+        }
+    }
+    */
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {}
+    
+
     
 //    func textFieldShouldReturn(_ textFieldA: UITextField, textFieldB: UITextField) -> Bool {
 //        // Hide keyboard
