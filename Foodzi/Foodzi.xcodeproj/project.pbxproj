@@ -23,6 +23,8 @@
 		4F0AFC22204A42AB008D4FD9 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC21204A42AB008D4FD9 /* RecipeDetailsViewController.swift */; };
 		4F0AFC24204A42DC008D4FD9 /* RecipeStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */; };
 		4F0AFC26204A4B40008D4FD9 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AFC25204A4B40008D4FD9 /* RecipeTableViewCell.swift */; };
+		A21EAE6E204B9DA3003FABBF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21EAE6D204B9DA3003FABBF /* SearchViewController.swift */; };
+		A21EAE71204BA4D3003FABBF /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21EAE70204BA4D3003FABBF /* SearchTableViewCell.swift */; };
 		AB318070204B4D16005B0123 /* ViewSavedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31806F204B4D16005B0123 /* ViewSavedController.swift */; };
 		AB318072204B5134005B0123 /* ViewProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB318071204B5134005B0123 /* ViewProfileController.swift */; };
 		AB318074204B55D7005B0123 /* RegisterNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB318073204B55D7005B0123 /* RegisterNewUser.swift */; };
@@ -60,6 +62,8 @@
 		4F0AFC21204A42AB008D4FD9 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStepsViewController.swift; sourceTree = "<group>"; };
 		4F0AFC25204A4B40008D4FD9 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		A21EAE6D204B9DA3003FABBF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A21EAE70204BA4D3003FABBF /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		AB31806F204B4D16005B0123 /* ViewSavedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSavedController.swift; sourceTree = "<group>"; };
 		AB318071204B5134005B0123 /* ViewProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileController.swift; sourceTree = "<group>"; };
 		AB318073204B55D7005B0123 /* RegisterNewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNewUser.swift; sourceTree = "<group>"; };
@@ -105,7 +109,9 @@
 		4F0AFBFC204A3789008D4FD9 /* Foodzi */ = {
 			isa = PBXGroup;
 			children = (
+				A21EAE6D204B9DA3003FABBF /* SearchViewController.swift */,
 				AB6C8FD8204B618000685AFB /* LoginViewController.swift */,
+				A21EAE70204BA4D3003FABBF /* SearchTableViewCell.swift */,
 				AB318073204B55D7005B0123 /* RegisterNewUser.swift */,
 				4F0AFC23204A42DC008D4FD9 /* RecipeStepsViewController.swift */,
 				4F0AFC21204A42AB008D4FD9 /* RecipeDetailsViewController.swift */,
@@ -244,11 +250,13 @@
 				4F0AFC24204A42DC008D4FD9 /* RecipeStepsViewController.swift in Sources */,
 				4DAD89E2204A618B00E51314 /* IngredientTableView.swift in Sources */,
 				4F0AFC00204A3789008D4FD9 /* ViewController.swift in Sources */,
+				A21EAE6E204B9DA3003FABBF /* SearchViewController.swift in Sources */,
 				4DAD89E4204A619E00E51314 /* DirectionTableView.swift in Sources */,
 				4DAD89DE204A60B000E51314 /* IngredientTableViewCell.swift in Sources */,
 				4DAD89E0204A60C300E51314 /* DirectionTableViewCell.swift in Sources */,
 				4F0AFBFE204A3789008D4FD9 /* AppDelegate.swift in Sources */,
 				4F0AFC26204A4B40008D4FD9 /* RecipeTableViewCell.swift in Sources */,
+				A21EAE71204BA4D3003FABBF /* SearchTableViewCell.swift in Sources */,
 				AB318072204B5134005B0123 /* ViewProfileController.swift in Sources */,
 				AB318070204B4D16005B0123 /* ViewSavedController.swift in Sources */,
 				4F0AFC1E204A4205008D4FD9 /* NewRecipeViewController.swift in Sources */,
