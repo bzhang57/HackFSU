@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ggw-Me-ifb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qax-65-B46">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -56,7 +56,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="didLogin:" destination="Qax-65-B46" eventType="touchUpInside" id="dzj-oC-73I"/>
-                                                            <action selector="login:" destination="Qax-65-B46" eventType="touchUpInside" id="FDa-62-fNY"/>
+                                                            <segue destination="BYZ-38-t0r" kind="show" id="zmb-fc-6do"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -73,6 +73,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQh-vO-GgL">
                                         <rect key="frame" x="0.0" y="260" width="305" height="30"/>
                                         <state key="normal" title="New User? Create Account"/>
+                                        <connections>
+                                            <segue destination="Ggw-Me-ifb" kind="show" id="Lue-IW-0IG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -95,10 +98,6 @@
                         <viewLayoutGuide key="safeArea" id="vsJ-4Q-Tgv"/>
                     </view>
                     <connections>
-                        <outlet property="CreateAccountButton" destination="gQh-vO-GgL" id="V7v-Y0-EOR"/>
-                        <outlet property="EmailTextField" destination="sXU-uV-tqW" id="HbP-1P-fpP"/>
-                        <outlet property="LoginButton" destination="LUF-S9-sYg" id="QtY-fd-E5d"/>
-                        <outlet property="PasswordTextField" destination="2R5-NC-JZp" id="oTj-GZ-v9c"/>
                         <outlet property="createAccountButton" destination="gQh-vO-GgL" id="iYg-ka-OtD"/>
                         <outlet property="emailTextField" destination="sXU-uV-tqW" id="eiA-ie-ZbM"/>
                         <outlet property="loginButton" destination="LUF-S9-sYg" id="crF-RZ-YmT"/>
@@ -219,35 +218,35 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WiZ-fo-5wM">
                                 <rect key="frame" x="22" y="612" width="330" height="50"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth_Globe_Americas_Emoji_large" translatesAutoresizingMaskIntoConstraints="NO" id="5dY-tp-gaK">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth_Globe_Americas_Emoji_large" translatesAutoresizingMaskIntoConstraints="NO" id="5dY-tp-gaK">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="3u2-Wz-vo4"/>
                                             <constraint firstAttribute="height" constant="50" id="rmo-tu-ED4"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The-heart" translatesAutoresizingMaskIntoConstraints="NO" id="hlU-93-8Lz">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The-heart" translatesAutoresizingMaskIntoConstraints="NO" id="hlU-93-8Lz">
                                         <rect key="frame" x="70" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Jmp-lE-YgH"/>
                                             <constraint firstAttribute="width" constant="50" id="Mhf-kJ-JxP"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus-sign-clipart-kid-4" translatesAutoresizingMaskIntoConstraints="NO" id="LKC-IJ-G52">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus-sign-clipart-kid-4" translatesAutoresizingMaskIntoConstraints="NO" id="LKC-IJ-G52">
                                         <rect key="frame" x="140" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="mM6-KF-SxV"/>
                                             <constraint firstAttribute="width" constant="50" id="rdK-qs-gRx"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8572900-monochromatic-magnifying-glass-icon" translatesAutoresizingMaskIntoConstraints="NO" id="gnt-bs-mju">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8572900-monochromatic-magnifying-glass-icon" translatesAutoresizingMaskIntoConstraints="NO" id="gnt-bs-mju">
                                         <rect key="frame" x="210" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="lq5-NG-XT0"/>
                                             <constraint firstAttribute="width" constant="50" id="mYl-C3-ewH"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-profile" translatesAutoresizingMaskIntoConstraints="NO" id="TZc-23-F4u">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-profile" translatesAutoresizingMaskIntoConstraints="NO" id="TZc-23-F4u">
                                         <rect key="frame" x="280" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="s9t-ZP-53i"/>
@@ -273,6 +272,8 @@
                     </view>
                     <connections>
                         <outlet property="mealHistoryTableView" destination="J58-fw-LNU" id="F4n-Jd-cfK"/>
+                        <outlet property="profileView" destination="TZc-23-F4u" id="ph8-ec-27z"/>
+                        <segue destination="xPx-97-9am" kind="show" identifier="feedToProfileSegue" id="fMX-OB-4Ap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -794,27 +795,37 @@
                                         </state>
                                         <connections>
                                             <action selector="didLogin:" destination="Qax-65-B46" eventType="touchUpInside" id="Ylr-rZ-W9j"/>
-                                            <action selector="login:" destination="Qax-65-B46" eventType="touchUpInside" id="PBR-Sm-hKZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVP-0t-KVd">
+                                <rect key="frame" x="0.0" y="617" width="375" height="30"/>
+                                <state key="normal" title="Back to Main Menu"/>
+                                <connections>
+                                    <segue destination="NhN-6T-oyP" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="Emy-TK-Qdj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GNO-53-SxH" firstAttribute="trailing" secondItem="C7i-8t-LmV" secondAttribute="trailing" constant="35" id="67R-Kw-HIe"/>
+                            <constraint firstItem="sVP-0t-KVd" firstAttribute="leading" secondItem="GNO-53-SxH" secondAttribute="leading" id="C0h-Mg-Wdg"/>
+                            <constraint firstItem="GNO-53-SxH" firstAttribute="trailing" secondItem="sVP-0t-KVd" secondAttribute="trailing" id="F4x-lN-adN"/>
                             <constraint firstItem="lsd-Fe-8ZE" firstAttribute="leading" secondItem="GNO-53-SxH" secondAttribute="leading" constant="12" id="eUI-2h-vZJ"/>
                             <constraint firstItem="lsd-Fe-8ZE" firstAttribute="top" secondItem="GNO-53-SxH" secondAttribute="top" constant="16" id="fi9-qT-V0Z"/>
                             <constraint firstItem="C7i-8t-LmV" firstAttribute="leading" secondItem="GNO-53-SxH" secondAttribute="leading" constant="35" id="gMp-5m-SsI"/>
                             <constraint firstAttribute="trailing" secondItem="lsd-Fe-8ZE" secondAttribute="trailing" constant="12" id="hQk-Ey-5m0"/>
+                            <constraint firstItem="GNO-53-SxH" firstAttribute="bottom" secondItem="sVP-0t-KVd" secondAttribute="bottom" constant="20" id="pGx-jV-JLy"/>
                             <constraint firstItem="C7i-8t-LmV" firstAttribute="top" secondItem="lsd-Fe-8ZE" secondAttribute="bottom" constant="48" id="tZk-AG-PvH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GNO-53-SxH"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBv-K4-Xar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NhN-6T-oyP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-986" y="766"/>
+            <point key="canvasLocation" x="-986.39999999999998" y="765.96701649175418"/>
         </scene>
         <!--View Profile Controller-->
         <scene sceneID="tNb-LP-4GC">

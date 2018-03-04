@@ -18,6 +18,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let cookNames = ["Jonathan", "Bryan", "Ray", "Kelly", "Chris"]
     var selectedRow = 0
     var name = ""
+    
+    
+    @IBOutlet weak var profileView: UIImageView!
+    
+    
     @IBOutlet weak var mealHistoryTableView: UITableView!
 
     @IBAction func addNewRecipe(_ sender: Any) {
