@@ -82,15 +82,24 @@
                                     <constraint firstAttribute="height" constant="112" id="7IJ-nl-eSI"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lE-vf-Lqb">
+                                <rect key="frame" x="35" y="201.5" width="305" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZSe-2d-ISP" firstAttribute="top" secondItem="vsJ-4Q-Tgv" secondAttribute="top" constant="50" id="55T-ag-D7s"/>
+                            <constraint firstItem="7lE-vf-Lqb" firstAttribute="leading" secondItem="vsJ-4Q-Tgv" secondAttribute="leading" constant="35" id="5H6-yk-YWJ"/>
                             <constraint firstItem="vsJ-4Q-Tgv" firstAttribute="trailing" secondItem="ZSe-2d-ISP" secondAttribute="trailing" constant="12" id="FWw-rh-ReG"/>
                             <constraint firstItem="ZSe-2d-ISP" firstAttribute="leading" secondItem="vsJ-4Q-Tgv" secondAttribute="leading" constant="12" id="MpJ-RQ-XR5"/>
+                            <constraint firstItem="zAs-CC-ed3" firstAttribute="top" secondItem="7lE-vf-Lqb" secondAttribute="bottom" constant="8" id="SEP-Tv-Og5"/>
                             <constraint firstItem="vsJ-4Q-Tgv" firstAttribute="trailing" secondItem="zAs-CC-ed3" secondAttribute="trailing" constant="35" id="WVV-pj-2ot"/>
                             <constraint firstItem="vsJ-4Q-Tgv" firstAttribute="bottom" secondItem="zAs-CC-ed3" secondAttribute="bottom" constant="147" id="ij1-Vk-w3K"/>
                             <constraint firstItem="zAs-CC-ed3" firstAttribute="leading" secondItem="vsJ-4Q-Tgv" secondAttribute="leading" constant="35" id="tr0-Q0-2UP"/>
+                            <constraint firstItem="vsJ-4Q-Tgv" firstAttribute="trailing" secondItem="7lE-vf-Lqb" secondAttribute="trailing" constant="35" id="wMe-BG-Rla"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vsJ-4Q-Tgv"/>
                     </view>
